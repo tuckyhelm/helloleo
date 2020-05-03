@@ -133,8 +133,15 @@ public class HelloLeo {
                 System.out.println("Sorry, I didn't catch that.");
             }
         }
+        myLeague.createStandings();
+        System.out.println("\nThe winner of " + myLeague.name + ", coming in with " + myLeague.teams[myLeague.standings[0]].points
+        + " points is...\n"+ myLeague.teams[myLeague.standings[0]].teamName + "!!!");
+        System.out.println("In second place is " + myLeague.teams[myLeague.standings[1]].teamName + " with " +
+                myLeague.teams[myLeague.standings[1]].points + " points.");
+        System.out.println("The " + myLeague.name + " standings are shown below:\n");
         myLeague.printInfo();
-
+        System.out.println("\nBelow is the team information for " + myLeague.teams[myLeague.standings[0]].teamName + ":");
+        myLeague.teams[myLeague.standings[0]].printInfo();
     }
     public void circle(){
         Scanner myScanner = new Scanner(System.in);

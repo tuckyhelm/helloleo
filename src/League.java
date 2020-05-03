@@ -6,7 +6,7 @@ public class League {
     int[] standings = new int[0];
     int[][] schedule;
     int week = 0;
-
+    String name;
     public League(){
 
     }
@@ -36,8 +36,8 @@ public class League {
     }
     public void create () {
         System.out.println("It's time to create your league! Please enter a name for the league (without spaces).");
-        String name = myScanner.next();
-        System.out.println("Great! " + name + " it is! Now enter an even number of teams between four and thirty");
+        name = myScanner.next();
+        System.out.println("Great! " + name + " it is! Now enter an even number of teams between four and thirty.");
         int teamsNum;
         teamsNum = myScanner.nextInt();
         while (teamsNum < 4 || teamsNum > 30 || teamsNum % 2 != 0) {
